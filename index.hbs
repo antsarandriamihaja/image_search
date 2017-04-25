@@ -8,12 +8,17 @@
     <body>
         <h1>Image search Engine</h1>
         <div class = 'form'>
-        <input id='image-query'type="text" autofocus autocomplete='off' placeholder = 'image'name = 'query'>
-        <button class ='btn-search'>Search</button>
+            <form id="query-form">
+                 <input id='image-query'type="text" autofocus autocomplete='off' placeholder = 'image'name = 'query'>
+        <button class ='btn-search'>Submit</button>
+    </form>
+       
         </div>
         <div class = results>
             <h2>Results</h2>
             <div id='json-results'></div>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/js/app.js"></script>
 </html>
