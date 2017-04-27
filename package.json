@@ -12,6 +12,9 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "hbs": "^4.0.1",
-    "mongoose": "^4.9.6"
+    "jQuery": "^1.7.4",
+    "jsdom": "^10.0.0",
+    "mongoose": "^4.9.6",
+    "url-parse": "^1.1.8"
   }
 }

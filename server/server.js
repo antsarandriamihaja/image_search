@@ -1,8 +1,10 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const hbs = require('hbs');
+const config = require('../config');
+const getJSON = require('get-json');
+const {generateAPI_URL, generateList} = require('./utils.js');
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -19,9 +21,12 @@ app.get('/', (req,res)=>{
 
 app.post('/api/imagesearch', (req, res) =>{
     var query = req.body.url;
-    res.send({"query":query});
+    var URL = generateAPI_URL(query);
+    var list = generateList(URL, (list) => {
+        console.log(list);
+        res.send(list);
+    });
 })
-
 
 app.listen(port, ()=>{
     console.log(`Server listening on ${port}`);

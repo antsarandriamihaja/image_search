@@ -9,8 +9,7 @@ $('.btn-search').on('click', function(){
         dataType: 'JSON',
         data: {url: $("#image-query").val()},
         success: function(data){
-            var result = 'results: '+data.query;
-            $('#json-results').html(result);
+     $('#json-results').text(JSON.stringify(data, null, 4));
         }
     })
 })
