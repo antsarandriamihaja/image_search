@@ -8,8 +8,9 @@ $('.btn-search').on('click', function(){
         type: 'POST',
         dataType: 'JSON',
         data: {url: $("#image-query").val()},
-        success: function(data){
-     $('#json-results').text(JSON.stringify(data, null, 4));
+        success: function(list){
+       $('.results').removeClass('hidden');
+     $('#json-results').html(JSON.stringify(list, null, 4));
         }
     })
 })

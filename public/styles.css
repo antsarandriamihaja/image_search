@@ -1,3 +1,21 @@
 body{
-    background-color: #AA00BB;
+    background-color: #CFD8DC;
+    text-align: center;
+}
+
+.hidden{
+    display: none
+}
+.results{
+    border: 2px solid #37474F;
+    background: white;
+    margin: 15%;
+    padding: 5%;
+
+}
+input{
+    width: 70%;
+  height: 20%;
+  padding: 20px 10px; line-height: 20px;
+  font-size: large
 }

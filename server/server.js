@@ -15,7 +15,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'hbs');
 
 app.get('/', (req,res)=>{
-    console.log('get running');
     res.render(path.join(__dirname, '../index.hbs'));
 });
 
@@ -23,9 +22,15 @@ app.post('/api/imagesearch', (req, res) =>{
     var query = req.body.url;
     var URL = generateAPI_URL(query);
     var list = generateList(URL, (list) => {
-        console.log(list);
         res.send(list);
     });
+});
+
+app.get('/:url', (req,res)=>{
+    console.log('get url fired');
+    var url = req.params;
+    console.log(`req param`, url);
+    res.redirect(url);
 })
 
 app.listen(port, ()=>{

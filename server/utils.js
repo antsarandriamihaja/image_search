@@ -12,11 +12,11 @@ var generateList = (url, callback) => {
         if (error) { console.log(error) };
         for (var i = 0; i < 10; i++) {
             result = {};
-            result.url = (response.items[i].link);
+            result.url = '<a target="blank" href='+(response.items[i].link)+'>'+response.items[i].link+'</a>';
             result.snippet = response.items[i].snippet;
-            result.context = (response.items[i].image.contextLink);
-            result.thumbnail = (response.items[i].image.thumbnailLink);
-            list.push(result);
+            result.context = '<a target="blank" href='+(response.items[i].image.contextLink)+'>'+(response.items[i].image.contextLink)+'</a>';
+            result.thumbnail = '<a target="blank" href='+(response.items[i].image.thumbnailLink)+'>'+(response.items[i].image.thumbnailLink)+'</a>';
+            list.push((result));
         } 
         callback(list)
         })
