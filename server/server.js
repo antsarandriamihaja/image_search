@@ -26,12 +26,6 @@ app.post('/api/imagesearch', (req, res) =>{
     });
 });
 
-app.get('/:url', (req,res)=>{
-    console.log('get url fired');
-    var url = req.params;
-    console.log(`req param`, url);
-    res.redirect(url);
-})
 
 app.listen(port, ()=>{
     console.log(`Server listening on ${port}`);

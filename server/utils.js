@@ -16,7 +16,8 @@ var generateList = (url, callback) => {
             result.snippet = response.items[i].snippet;
             result.context = '<a target="blank" href='+(response.items[i].image.contextLink)+'>'+(response.items[i].image.contextLink)+'</a>';
             result.thumbnail = '<a target="blank" href='+(response.items[i].image.thumbnailLink)+'>'+(response.items[i].image.thumbnailLink)+'</a>';
-            list.push((result));
+            list.push(result);
+          
         } 
         callback(list)
         })
